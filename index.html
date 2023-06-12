@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Minha Página Inicial Personalizada</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .navigation {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            display: flex;
+            gap: 10px;
+        }
+
+        .navigation button {
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 8px;
+            border: none;
+            background-color: #007aff;
+            color: #ffffff;
+            cursor: pointer;
+            transition: background-color 0.2s;
+        }
+
+        .navigation button:hover {
+            background-color: #0056b3;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+            gap: 20px;
+            padding: 30px;
+            width: 80vw;
+            height: 80vh;
+            overflow-y: scroll;
+            border-radius: 15px;
+            background-color: #ffffff;
+            box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        .app-grid::-webkit-scrollbar {
+            display: none;
+        }
+
+        .app {
+            text-align: center;
+            color: #333333;
+            font-size: 14px;
+        }
+
+        .app-icon {
+            width: 32px;
+            height: 32px;
+            object-fit: contain;
+        }
+
+        .app-label {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="navigation">
+        <button onclick="history.back()">Voltar</button>
+        <button onclick="location.href='https://seu-site-home.com'">Home</button>
+        <button onclick="window.close()">Sair</button>
+    </div>
+    <div class="app-grid">
+        <a class="app" href="https://sistemafiep.sharepoint.com/sites/integra/home.aspx" target="_blank">
+            <img class="app-icon" src="https://www.google.com/s2/favicons?domain=sistemafiep.sharepoint.com">
+            <div class="app-label">SharePoint - FIEP</div>
+        </a>
+        <!-- ... restante do código ... -->
+    </div>
+</body>
+</html>
